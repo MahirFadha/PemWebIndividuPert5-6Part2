@@ -1,0 +1,164 @@
+body {
+  background-color: rgb(16, 16, 16);
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+}
+
+.kiri {
+  flex-grow: 3;
+}
+
+.gambarKiri {
+  width: 140px;
+  height: 140px;
+  user-select: none;
+}
+
+.tengah {
+  flex-grow: auto;
+  /* text-align: center; */
+}
+
+.gambarTengah {
+  width: 150px;
+  height: 30px;
+  margin-left: 50px;
+  user-select: none;
+}
+
+h3.header {
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.input {
+  text-align: center;
+}
+
+input {
+  width: 76%;
+  height: 36px;
+  background-color: rgb(30, 30, 30);
+  color: gray;
+  align-items: center;
+  margin: 4px;
+  border-radius: 14px;
+  border: none;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.btnLogin {
+  width: 83%;
+  height: 58px;
+  margin: 4px;
+  border-radius: 14px;
+  color: black;
+  font-weight: 700;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btnLogin:disabled {
+  cursor: not-allowed;
+  color: gray;
+  pointer-events: all;
+}
+
+.tengah h5 {
+  color: rgb(111, 110, 110);
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: 200;
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+
+.lupasandi {
+  cursor: pointer;
+}
+
+.continue {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.btnContinue {
+  display: flex;
+  background-color: rgb(16, 16, 16);
+  width: 83%;
+  height: 78px;
+  border-radius: 14px;
+  border: solid rgb(78, 78, 78) 0.1px;
+  outline: transparent;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.iconNextContinue {
+  height: 20px;
+  width: 20px;
+}
+
+.footer {
+  display: flex;
+  font-size: 14px;
+  gap: 14px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.footerClick {
+  cursor: pointer;
+}
+
+.kanan {
+  flex-grow: 2;
+  text-align: end;
+}
+
+.gambarKanan {
+  width: 250px;
+  height: 200px;
+  user-select: none;
+}
+
+.kanan h5 {
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  margin-right: 34px;
+  margin-top: 200px;
+  margin-bottom: 16px;
+}
+
+.qrCode {
+  width: 180px;
+  height: 180px;
+  border-radius: 20px;
+  outline: gray solid 1px;
+  margin-right: 40px;
+  align-items: center;
+  justify-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.qrCode:hover {
+  width: 190px;
+  height: 190px;
+  margin-right: 35px;
+}
