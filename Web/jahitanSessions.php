@@ -1,11 +1,13 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["username"])) {
-    $username = $_POST["username"];
-    setcookie("username", $username, time() + (86400 * 2), "/");
-    header("Location:home.php");
+session_start();
+
+$_SESSION["username"] = "MahirFadha";
+
+if (isset($_SESSION["username"])) {
+    echo "Username: " . $_SESSION["username"];
+} else {
+    echo "Session belum diset";
 }
-
-
 ?>
 
 
