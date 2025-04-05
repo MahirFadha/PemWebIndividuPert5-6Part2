@@ -1,14 +1,15 @@
 <?php
 
 $hostname = "172.17.8.83";
+$port = 5432;
 $username = "postgres";
 $password = "Mahir";
 $database = "PemWebWebsite";
 
-try {
-    $pdo = new PDO("pgsql:host=$hostname;dbname=$database", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Koneksi berhasil";
-} catch (PDOException $e) {
-    echo "Koneksi Gagal " . $e->getMessage();
+$koneksi = pg_connect("host=$hostname port=$port dbname=$database user=$username password=$password");
+
+if ($koneksi) {
+    echo "Koneksi Succes";
+} else {
+    echo "Koneksi Error";
 }
