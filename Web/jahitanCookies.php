@@ -4,15 +4,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["username"])) {
     setcookie("username", $username, time() + (86400 * 2), "/");
     header("Location:home.php");
 }
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
-    <meta chartset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Threads</title>
     <link rel="stylesheet" href="tampilan.css">
@@ -27,3 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["username"])) {
 </body>
 
 </html>
+<?php
+include "Koneksi/koneksi.php";
+?>
