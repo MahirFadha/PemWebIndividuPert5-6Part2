@@ -1,7 +1,9 @@
 <?php
+session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["username"])) {
     $username = $_POST["username"];
     setcookie("username", $username, time() + (86400 * 2), "/");
+    $_SESSION["username"] = $username;
     header("Location:home.php");
 }
 ?>

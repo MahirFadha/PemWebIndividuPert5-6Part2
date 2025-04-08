@@ -1,9 +1,20 @@
 <?php
+session_start();
 if (isset($_COOKIE["username"])) {
-    $username = $_COOKIE["username"];
+    $cookies = $_COOKIE["username"];
 } else {
-    $username = "Guest";
+    $cookies = "Cookies";
 }
+
+if (isset($_SESSION["username"])) {
+    $sessions = $_SESSION["username"];
+} else {
+    $sessions = "Sessions";
+}
+
+print_r($_SESSION);
 ?>
 
-<h1>Halo, <?php echo $username; ?> !</h1>
+
+<h1>Halo, <?php echo $cookies; ?> !</h1>
+<h1>Halo, <?php echo $sessions; ?> !</h1>
